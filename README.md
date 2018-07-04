@@ -1,10 +1,7 @@
-# Named Entity Recognition with Tensorflow
+# NLP Attribute Extraction 
 
-This repo implements a NER model using Tensorflow (LSTM + CRF + chars embeddings).
+This repo implements a NER model using Tensorflow ( Satcked Bi-directional LSTM + CRF + chars embeddings).
 
-State-of-the-art performance (F1 score between 90 and 91).
-
-Check the [blog post](https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html)
 
 ## Task
 
@@ -22,7 +19,7 @@ Similar to [Lample et al.](https://arxiv.org/abs/1603.01360) and [Ma and Hovy](h
 
 - concatenate final states of a bi-lstm on character embeddings to get a character-based representation of each word
 - concatenate this representation to a standard word vector representation (GloVe here)
-- run a bi-lstm on each sentence to extract contextual representation of each word
+- run a stacked bi-lstm on each sentence to extract contextual representation of each word
 - decode with a linear chain CRF
 
 
@@ -106,10 +103,8 @@ test_filename = "data/coNLL/eng/eng.testb.iob"
 train_filename = "data/coNLL/eng/eng.train.iob"
 ```
 
-
-
-
-## License
-
-This project is licensed under the terms of the apache 2.0 license (as Tensorflow and derivatives). If used for research, citation would be appreciated.
+# Make the following folders:
+Sequence tagging [build_data.py, evaluate.py , train.py, model,data]
+model [base_model.py, config.py, data_utils.py, general_utils.py,ner_model.py]
+data [xyz_test.txt , xyz_train.txt] // Put Glove pretrained vector [300d] in this folder.
 
