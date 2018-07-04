@@ -105,6 +105,8 @@ train_filename = "data/coNLL/eng/eng.train.iob"
 
 # Make the following folders:
 Sequence tagging [build_data.py, evaluate.py , train.py, model,data]
+
 model [base_model.py, config.py, data_utils.py, general_utils.py,ner_model.py]
+
 data [xyz_test.txt , xyz_train.txt] // Put Glove pretrained vector [300d] in this folder.
 
