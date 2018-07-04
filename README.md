@@ -5,11 +5,11 @@ This repo implements a NER model using Tensorflow ( Satcked Bi-directional LSTM 
 
 ## Task
 
-Given a sentence, give a tag to each word. A classical application is Named Entity Recognition (NER). Here is an example
+Given a sentence, give a tag to each word. 
 
 ```
-John   lives in New   York
-B-PER  O     O  B-LOC I-LOC
+Komnil  Men's  cerulean  blue     graphical  scooter  half     sleeve    round   neck    tshirt.
+B_BRAND  O      O       B_COLOR     O         O      B_SLEEVE  I_SLEEVE   B_TYPE  I_TYPE  O
 ```
 
 
@@ -74,23 +74,24 @@ Training time on NVidia Tesla K80 is 110 seconds per epoch on CoNLL train set us
 ## Training Data
 
 
-The training data must be in the following format (identical to the CoNLL2003 dataset).
+The training data must be in the following format.
 
 A default test file is provided to help you getting started.
 
 
 ```
-John B-PER
-lives O
-in O
-New B-LOC
-York I-LOC
+Komnil B_BRAND
+Men'S O
+Cerulean O
+Blue B_COLOR
+Graphical O
+Scooter O
+Half B_SLEEVE
+Sleeve I_SLEEVE
+Round B_TYPE
+Neck I_TYPE
+T-shirt O
 . O
-
-This O
-is O
-another O
-sentence
 ```
 
 
